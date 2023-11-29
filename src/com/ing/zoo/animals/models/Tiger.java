@@ -14,8 +14,8 @@ import java.util.Random;
  */
 public class Tiger implements Animal, Carnivore, TrickAnimal {
     private String name;
-    private String helloText;
-    private String eatText;
+    private final String helloText;
+    private final String eatText;
     private String trick;
 
     // Creating a constant for Random

@@ -15,7 +15,7 @@ import java.util.Random;
  */
 public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
     private String name;
-    private String helloText;
+    private final String helloText;
     private String eatText;
     private String trick;
 

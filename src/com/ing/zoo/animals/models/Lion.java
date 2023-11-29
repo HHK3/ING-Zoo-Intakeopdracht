@@ -11,8 +11,8 @@ import com.ing.zoo.animals.interfaces.Carnivore;
  */
 public class Lion implements Animal, Carnivore {
     private String name;
-    private String helloText;
-    private String eatText;
+    private final String helloText;
+    private final String eatText;
 
     // Constructor for Lion
     public Lion() {

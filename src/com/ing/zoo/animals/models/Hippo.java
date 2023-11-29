@@ -11,8 +11,8 @@ import com.ing.zoo.animals.interfaces.Herbivore;
  */
 public class Hippo implements Animal, Herbivore {
     private String name;
-    private String helloText;
-    private String eatText;
+    private final String helloText;
+    private final String eatText;
 
     public Hippo() {
         this.helloText = "Splash, hello there!";
