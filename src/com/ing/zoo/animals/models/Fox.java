@@ -1,35 +1,35 @@
 package com.ing.zoo.animals.models;
 
 import com.ing.zoo.animals.interfaces.Animal;
+import com.ing.zoo.animals.interfaces.Carnivore;
 import com.ing.zoo.animals.interfaces.Herbivore;
 import com.ing.zoo.animals.interfaces.TrickAnimal;
 
 import java.util.Random;
 
 /**
- * Instance class for Zebra
+ * Instance class for Fox
  *
  * @author Joël Lakhai
  * @version 1.0
  */
-public class Zebra implements Animal, Herbivore, TrickAnimal {
+public class Fox implements Animal, Carnivore, Herbivore, TrickAnimal {
     private String name;
     private final String helloText;
-    private final String eatText;
+    private String eatText;
     private String trick;
 
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
     /**
-     * Constructor for Zebra
+     * Constructor for Fox
      *
-     * @param name The name of the zebra
+     * @param name The name of the fox
      */
-    public Zebra(String name) {
+    public Fox(String name) {
         this.name = name;
-        this.helloText = this.name + ": Zebra Zebra!";
-        this.eatText = this.name + ": Munch munch: Zank Yee Brah!";
+        this.helloText = this.name + ": Ring-ding-ding-ding-dingeringeding! Mission complete!";
     }
 
     @Override
@@ -43,7 +43,14 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
     }
 
     @Override
+    public void eatMeat() {
+        this.eatText = this.name + ": Oh, some meat! Nomnomnom";
+        System.out.println(eatText);
+    }
+
+    @Override
     public void eatLeafs() {
+        this.eatText = this.name + ": Oh, some leafs! Munch munch";
         System.out.println(eatText);
     }
 
@@ -52,9 +59,9 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = this.name + ": Singing Afro Circus!";
+            trick = this.name + ": Performing a backflip!";
         } else {
-            trick = this.name + ": Running at high speed!";
+            trick = this.name + ": Wavedash!";
         }
 
         System.out.println(trick);
