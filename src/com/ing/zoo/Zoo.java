@@ -14,30 +14,27 @@ public class Zoo {
         commands[3] = "perform trick";
 
         Lion henk = new Lion();
-        henk.name = "henk";
+        henk.setName("Henk");
 
         Hippo elsa = new Hippo();
-        elsa.name = "elsa";
+        elsa.setName("Elsa");
 
         Pig dora = new Pig();
         dora.setName("Dora");
 
         Tiger wally = new Tiger();
-        wally.name = "wally";
+        wally.setName("Wally");
 
         Zebra marty = new Zebra();
-        marty.name = "marty";
+        marty.setName("Marty");
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
-        {
-            henk.sayHello();
-        }
-        else
-        {
+        if(input.equals(commands[0] + " dora")) {
+            dora.sayHello();
+        } else {
             System.out.println("Unknown command: " + input);
         }
     }

@@ -1,41 +1,63 @@
 package com.ing.zoo.animals.models;
 
+import com.ing.zoo.animals.interfaces.Animal;
+import com.ing.zoo.animals.interfaces.Carnivore;
+import com.ing.zoo.animals.interfaces.TrickAnimal;
+
 import java.util.Random;
 
-public class Tiger {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+/**
+ * Instance class for Tiger
+ *
+ * @author Joël Lakhai
+ * @version 1.0
+ */
+public class Tiger implements Animal, Carnivore, TrickAnimal {
+    private String name;
+    private String helloText;
+    private String eatText;
+    private String trick;
 
-    public Tiger()
-    {
+    // Creating a constant for Random
+    private static final Random RANDOM = new Random();
+
+    // Constructor for Tiger
+    public Tiger() {
+        this.helloText = "Rrraaarww";
+        this.eatText = "Mmmmm, delicious meat! Rrraaarww";
     }
 
-    public void sayHello()
-    {
-        helloText = "rraaarww";
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void sayHello() {
         System.out.println(helloText);
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink wubalubadubdub";
+    @Override
+    public void eatMeat() {
         System.out.println(eatText);
     }
 
-    public void performTrick()
-    {
-        Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "jumps in tree";
+    @Override
+    public void performTrick() {
+        int rnd = RANDOM.nextInt(2);
+
+        if (rnd == 0) {
+            trick = "Jumping in a tree!";
+        } else {
+            trick = "Scratching my ears!";
         }
-        else
-        {
-            trick = "scratches ears";
-        }
+
         System.out.println(trick);
     }
+
 }

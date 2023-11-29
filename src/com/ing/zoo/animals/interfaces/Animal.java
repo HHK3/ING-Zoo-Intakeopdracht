@@ -12,7 +12,7 @@ public interface Animal {
 
     // Method that sets the name for the animal
     void setName(String name);
-    
+
     // Method that lets the animal say hello
     void sayHello();
 }

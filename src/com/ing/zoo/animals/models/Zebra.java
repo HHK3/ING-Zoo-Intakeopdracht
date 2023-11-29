@@ -1,26 +1,62 @@
 package com.ing.zoo.animals.models;
 
+import com.ing.zoo.animals.interfaces.Animal;
+import com.ing.zoo.animals.interfaces.Herbivore;
+import com.ing.zoo.animals.interfaces.TrickAnimal;
+
 import java.util.Random;
 
-public class Zebra {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+/**
+ * Instance class for Zebra
+ *
+ * @author Joël Lakhai
+ * @version 1.0
+ */
+public class Zebra implements Animal, Herbivore, TrickAnimal {
+    private String name;
+    private String helloText;
+    private String eatText;
+    private String trick;
 
-    public Zebra()
-    {
+    // Creating a constant for Random
+    private static final Random RANDOM = new Random();
+
+    // Constructor for Zebra
+    public Zebra() {
+        this.helloText = "Zebra Zebra!";
+        this.eatText = "Munch munch: Zank Yee Brah!";
     }
 
-    public void sayHello()
-    {
-        helloText = "zebra zebra";
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void sayHello() {
         System.out.println(helloText);
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch zank yee bra";
+    @Override
+    public void eatLeaves() {
         System.out.println(eatText);
+    }
+
+    @Override
+    public void performTrick() {
+        int rnd = RANDOM.nextInt(2);
+
+        if (rnd == 0) {
+            trick = "Singing Afro Circus!";
+        } else {
+            trick = "Running at high speed!";
+        }
+
+        System.out.println(trick);
     }
 }
