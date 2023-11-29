@@ -22,8 +22,13 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
-    // Constructor for Pig
-    public Pig() {
+    /**
+     * Constructor for Pig
+     *
+     * @param name The name of the pig
+     */
+    public Pig(String name) {
+        this.name = name;
         this.helloText = "Splash, oink oink";
     }
 

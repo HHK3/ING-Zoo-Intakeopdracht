@@ -21,8 +21,13 @@ public class Falcon implements Animal, Carnivore, TrickAnimal {
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
-    // Constructor for Falcon
-    public Falcon() {
+    /**
+     * Constructor for Falcon
+     *
+     * @param name The name of the falcon
+     */
+    public Falcon(String name) {
+        this.name       = name;
         this.helloText  = "Kraaaw! Personally, I prefer the air!";
         this.eatText    = "Kraaaw! I'm eating a mouse!";
     }
@@ -30,11 +35,6 @@ public class Falcon implements Animal, Carnivore, TrickAnimal {
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

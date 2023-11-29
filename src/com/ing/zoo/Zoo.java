@@ -1,38 +1,34 @@
 package com.ing.zoo;
 
+import com.ing.zoo.animals.interfaces.Animal;
 import com.ing.zoo.animals.models.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Main class for the Zoo
+ *
+ * @author Joël Lakhai
+ * @version 1.0
+ */
 public class Zoo {
-    public static void main(String[] args)
-    {
-        String[] commands = new String[4];
-        commands[0] = "hello";
-        commands[1] = "give leaves";
-        commands[2] = "give meat";
-        commands[3] = "perform trick";
+    public static void main(String[] args) {
+        // The commands that are available to use
+        String[] commands = {"hello", "give leafs", "give meat", "performTrick"};
 
-        Lion henk = new Lion();
-        henk.setName("Henk");
-
-        Hippo elsa = new Hippo();
-        elsa.setName("Elsa");
-
-        Pig dora = new Pig();
-        dora.setName("Dora");
-
-        Tiger wally = new Tiger();
-        wally.setName("Wally");
-
-        Zebra marty = new Zebra();
-        marty.setName("Marty");
-
-        Fox james = new Fox();
-        james.setName("James");
-
-        Falcon Falco = new Falcon();
-        Falco.setName("Falco");
+        // Create a list of Animals with the animals that are in the zoo
+        List<Animal> animals = new ArrayList<>(Arrays.asList(
+            new Lion("Simba"),
+            new Hippo("Dora"),
+            new Pig("Pumba"),
+            new Tiger("Khan"),
+            new Zebra("Marty"),
+            new Fox("Nick"),
+            new Falcon("Falco")
+        ));
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");

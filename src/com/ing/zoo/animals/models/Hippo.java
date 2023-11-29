@@ -14,7 +14,13 @@ public class Hippo implements Animal, Herbivore {
     private final String helloText;
     private final String eatText;
 
-    public Hippo() {
+    /**
+     * Constructor for Hippo
+     *
+     * @param name The name of the hippo
+     */
+    public Hippo(String name) {
+        this.name = name;
         this.helloText = "Splash, hello there!";
         this.eatText = "Munch munch, lovely!";
     }
@@ -22,11 +28,6 @@ public class Hippo implements Animal, Herbivore {
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

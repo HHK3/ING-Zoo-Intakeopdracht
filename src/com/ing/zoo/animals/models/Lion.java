@@ -14,8 +14,13 @@ public class Lion implements Animal, Carnivore {
     private final String helloText;
     private final String eatText;
 
-    // Constructor for Lion
-    public Lion() {
+    /**
+     * Constructor for Lion
+     *
+     * @param name The name of the lion
+     */
+    public Lion(String name) {
+        this.name = name;
         this.helloText = "Roarrrr!";
         this.eatText = "Nomnomnom, thnx mate!";
     }
@@ -23,11 +28,6 @@ public class Lion implements Animal, Carnivore {
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

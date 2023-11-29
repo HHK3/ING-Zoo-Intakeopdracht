@@ -21,8 +21,13 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
-    // Constructor for Zebra
-    public Zebra() {
+    /**
+     * Constructor for Zebra
+     *
+     * @param name The name of the zebra
+     */
+    public Zebra(String name) {
+        this.name = name;
         this.helloText = "Zebra Zebra!";
         this.eatText = "Munch munch: Zank Yee Brah!";
     }
@@ -30,11 +35,6 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

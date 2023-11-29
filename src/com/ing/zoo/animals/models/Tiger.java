@@ -21,8 +21,13 @@ public class Tiger implements Animal, Carnivore, TrickAnimal {
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
-    // Constructor for Tiger
-    public Tiger() {
+    /**
+     * Constructor for Tiger
+     *
+     * @param name The name of the tiger
+     */
+    public Tiger(String name) {
+        this.name = name;
         this.helloText = "Rrraaarww";
         this.eatText = "Mmmmm, delicious meat! Rrraaarww";
     }
@@ -30,11 +35,6 @@ public class Tiger implements Animal, Carnivore, TrickAnimal {
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

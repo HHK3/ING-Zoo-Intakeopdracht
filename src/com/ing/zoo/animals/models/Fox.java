@@ -22,19 +22,19 @@ public class Fox implements Animal, Carnivore, Herbivore, TrickAnimal {
     // Creating a constant for Random
     private static final Random RANDOM = new Random();
 
-    // Constructor for Fox
-    public Fox() {
+    /**
+     * Constructor for Fox
+     *
+     * @param name The name of the fox
+     */
+    public Fox(String name) {
+        this.name = name;
         this.helloText = "Ring-ding-ding-ding-dingeringeding! Mission complete!";
     }
 
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
