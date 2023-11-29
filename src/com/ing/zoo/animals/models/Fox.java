@@ -29,7 +29,7 @@ public class Fox implements Animal, Carnivore, Herbivore, TrickAnimal {
      */
     public Fox(String name) {
         this.name = name;
-        this.helloText = "Ring-ding-ding-ding-dingeringeding! Mission complete!";
+        this.helloText = this.name + ": Ring-ding-ding-ding-dingeringeding! Mission complete!";
     }
 
     @Override
@@ -44,13 +44,13 @@ public class Fox implements Animal, Carnivore, Herbivore, TrickAnimal {
 
     @Override
     public void eatMeat() {
-        this.eatText = "Oh, some meat! Nomnomnom";
+        this.eatText = this.name + ": Oh, some meat! Nomnomnom";
         System.out.println(eatText);
     }
 
     @Override
     public void eatLeafs() {
-        this.eatText = "Oh, some leafs! Munch munch";
+        this.eatText = this.name + ": Oh, some leafs! Munch munch";
         System.out.println(eatText);
     }
 
@@ -59,9 +59,9 @@ public class Fox implements Animal, Carnivore, Herbivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = "Performing a backflip!";
+            trick = this.name + ": Performing a backflip!";
         } else {
-            trick = "Wavedash!";
+            trick = this.name + ": Wavedash!";
         }
 
         System.out.println(trick);

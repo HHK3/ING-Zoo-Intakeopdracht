@@ -28,8 +28,8 @@ public class Tiger implements Animal, Carnivore, TrickAnimal {
      */
     public Tiger(String name) {
         this.name = name;
-        this.helloText = "Rrraaarww";
-        this.eatText = "Mmmmm, delicious meat! Rrraaarww";
+        this.helloText = this.name + ": Rrraaarww";
+        this.eatText = this.name + ": Mmmmm, delicious meat! Rrraaarww";
     }
 
     @Override
@@ -52,9 +52,9 @@ public class Tiger implements Animal, Carnivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = "Jumping in a tree!";
+            trick = this.name + ": Jumping in a tree!";
         } else {
-            trick = "Scratching my ears!";
+            trick = this.name + ": Scratching my ears!";
         }
 
         System.out.println(trick);

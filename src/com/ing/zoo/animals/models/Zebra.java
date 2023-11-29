@@ -28,8 +28,8 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
      */
     public Zebra(String name) {
         this.name = name;
-        this.helloText = "Zebra Zebra!";
-        this.eatText = "Munch munch: Zank Yee Brah!";
+        this.helloText = this.name + ": Zebra Zebra!";
+        this.eatText = this.name + ": Munch munch: Zank Yee Brah!";
     }
 
     @Override
@@ -52,9 +52,9 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = "Singing Afro Circus!";
+            trick = this.name + ": Singing Afro Circus!";
         } else {
-            trick = "Running at high speed!";
+            trick = this.name + ": Running at high speed!";
         }
 
         System.out.println(trick);

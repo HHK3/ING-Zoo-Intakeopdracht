@@ -21,8 +21,8 @@ public class Lion implements Animal, Carnivore {
      */
     public Lion(String name) {
         this.name = name;
-        this.helloText = "Roarrrr!";
-        this.eatText = "Nomnomnom, thnx mate!";
+        this.helloText = this.name + ": Roarrrr!";
+        this.eatText = this.name + ": Nomnomnom, thnx mate!";
     }
 
     @Override

@@ -21,8 +21,8 @@ public class Hippo implements Animal, Herbivore {
      */
     public Hippo(String name) {
         this.name = name;
-        this.helloText = "Splash, hello there!";
-        this.eatText = "Munch munch, lovely!";
+        this.helloText = this.name + ": Splash, hello there!";
+        this.eatText = this.name + ": Munch munch, lovely!";
     }
 
     @Override

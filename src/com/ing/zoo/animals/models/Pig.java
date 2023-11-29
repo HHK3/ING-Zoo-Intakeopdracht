@@ -29,17 +29,12 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
      */
     public Pig(String name) {
         this.name = name;
-        this.helloText = "Splash, oink oink";
+        this.helloText = this.name + ": Splash, oink oink";
     }
 
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
@@ -49,13 +44,13 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
 
     @Override
     public void eatMeat() {
-        eatText = "Ah, a dead frog! Nomnomnom, oink thnx!";
+        eatText = this.name + " Ah, a dead frog! Nomnomnom, oink thnx!";
         System.out.println(eatText);
     }
 
     @Override
     public void eatLeafs() {
-        eatText = "Nice, some leafs! Munch munch, oink oink!";
+        eatText = this.name + ": Nice, some leafs! Munch munch, oink oink!";
         System.out.println(eatText);
     }
 
@@ -64,9 +59,9 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = "Rolling in the mud!";
+            trick = this.name + ": Rolling in the mud!";
         } else {
-            trick = "Running in circles!";
+            trick = this.name + ": Running in circles!";
         }
 
         System.out.println(trick);

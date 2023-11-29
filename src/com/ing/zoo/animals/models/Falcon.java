@@ -28,8 +28,8 @@ public class Falcon implements Animal, Carnivore, TrickAnimal {
      */
     public Falcon(String name) {
         this.name       = name;
-        this.helloText  = "Kraaaw! Personally, I prefer the air!";
-        this.eatText    = "Kraaaw! I'm eating a mouse!";
+        this.helloText  = this.name + ": Kraaaw! Personally, I prefer the air!";
+        this.eatText    = this.name + ": Kraaaw! I'm eating a mouse!";
     }
 
     @Override
@@ -52,9 +52,9 @@ public class Falcon implements Animal, Carnivore, TrickAnimal {
         int rnd = RANDOM.nextInt(2);
 
         if (rnd == 0) {
-            trick = "Doing loopings!";
+            trick = this.name + ": Doing loopings!";
         } else {
-            trick = "Doing a barrel roll!";
+            trick = this.name + ": Doing a barrel roll!";
         }
 
         System.out.println(trick);
