@@ -1,23 +1,23 @@
-package com.ing.zoo;
+package com.ing.zoo.animals.models;
 
-public class Lion {
+public class Hippo {
     public String name;
     public String helloText;
     public String eatText;
 
-    public Lion()
+    public Hippo()
     {
     }
 
     public void sayHello()
     {
-        helloText = "roooaoaaaaar";
+        helloText = "splash";
         System.out.println(helloText);
     }
 
-    public void eatMeat()
+    public void eatLeaves()
     {
-        eatText = "nomnomnom thx mate";
+        eatText = "munch munch lovely";
         System.out.println(eatText);
     }
 }
