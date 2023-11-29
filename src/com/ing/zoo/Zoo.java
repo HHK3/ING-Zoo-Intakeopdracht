@@ -15,12 +15,16 @@ public class Zoo {
 
         Lion henk = new Lion();
         henk.name = "henk";
+
         Hippo elsa = new Hippo();
         elsa.name = "elsa";
+
         Pig dora = new Pig();
-        dora.name = "dora";
+        dora.setName("Dora");
+
         Tiger wally = new Tiger();
         wally.name = "wally";
+
         Zebra marty = new Zebra();
         marty.name = "marty";
 

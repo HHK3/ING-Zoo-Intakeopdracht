@@ -1,47 +1,69 @@
 package com.ing.zoo.animals.models;
 
+import com.ing.zoo.animals.interfaces.Animal;
+import com.ing.zoo.animals.interfaces.Carnivore;
+import com.ing.zoo.animals.interfaces.Herbivore;
+import com.ing.zoo.animals.interfaces.TrickAnimal;
+
 import java.util.Random;
 
-public class Pig {
-    public String name;
-    public String helloText;
-    public String eatText;
-    public String trick;
+/**
+ * Instance class for Pig
+ *
+ * @author Joël Lakhai
+ * @version 1.0
+ */
+public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
+    private String name;
+    private String helloText;
+    private String eatText;
+    private String trick;
 
-    public Pig()
-    {
+    // Creating a constant for Random
+    private static final Random RANDOM = new Random();
+
+    // Constructor for Pig
+    public Pig() {
+        this.helloText = "Splash, oink oink";
     }
 
-    public void sayHello()
-    {
-        helloText = "splash";
-        System.out.println(helloText);
+    @Override
+    public String getName() {
+        return name;
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch oink";
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void sayHello() {
+
+    }
+
+    @Override
+    public void eatMeat() {
+        eatText = "Ah, a dead frog! Nomnomnom, oink thnx!";
         System.out.println(eatText);
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink thx";
+    @Override
+    public void eatLeaves() {
+        eatText = "Nice, some leafs! Munch munch, oink oink!";
         System.out.println(eatText);
     }
 
-    public void performTrick()
-    {
-        Random random = new Random();
-        int rnd = random.nextInt(2);
-        if(rnd == 0)
-        {
-            trick = "rolls in the mud";
+    @Override
+    public void performTrick() {
+        int rnd = RANDOM.nextInt(2);
+
+        if (rnd == 0) {
+            trick = "Rolling in the mud!";
+        } else {
+            trick = "Running in circles!";
         }
-        else
-        {
-            trick = "runs in circles";
-        }
+
         System.out.println(trick);
     }
 }
