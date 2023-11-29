@@ -28,6 +28,12 @@ public class Zoo {
         Zebra marty = new Zebra();
         marty.setName("Marty");
 
+        Fox james = new Fox();
+        james.setName("James");
+
+        Falcon Falco = new Falcon();
+        Falco.setName("Falco");
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
