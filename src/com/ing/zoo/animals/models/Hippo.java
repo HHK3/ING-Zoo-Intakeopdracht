@@ -35,7 +35,7 @@ public class Hippo implements Animal, Herbivore {
     }
 
     @Override
-    public void eatLeaves() {
+    public void eatLeafs() {
         System.out.println(eatText);
     }
 }

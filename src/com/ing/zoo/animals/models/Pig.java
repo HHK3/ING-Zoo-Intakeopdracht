@@ -49,7 +49,7 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
     }
 
     @Override
-    public void eatLeaves() {
+    public void eatLeafs() {
         eatText = "Nice, some leafs! Munch munch, oink oink!";
         System.out.println(eatText);
     }

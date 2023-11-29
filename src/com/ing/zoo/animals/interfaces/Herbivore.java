@@ -7,6 +7,6 @@ package com.ing.zoo.animals.interfaces;
  * @version 1.0
  */
 public interface Herbivore {
-    // Method that lets the animal eat leaves
-    void eatLeaves();
+    // Method that lets the animal eat leafs
+    void eatLeafs();
 }

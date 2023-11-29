@@ -43,7 +43,7 @@ public class Zebra implements Animal, Herbivore, TrickAnimal {
     }
 
     @Override
-    public void eatLeaves() {
+    public void eatLeafs() {
         System.out.println(eatText);
     }
 
