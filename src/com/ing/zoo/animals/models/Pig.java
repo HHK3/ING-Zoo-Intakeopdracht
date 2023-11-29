@@ -39,7 +39,7 @@ public class Pig implements Animal, Carnivore, Herbivore, TrickAnimal {
 
     @Override
     public void sayHello() {
-
+        System.out.println(helloText);
     }
 
     @Override
